@@ -1,15 +1,15 @@
 header{
-	position: fixed;
-	width: 100%;
-	z-index: 999;
-	line-height: 45px;
-	box-shadow: 1px 0px 5px 0 #ccd0d9;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    line-height: 45px;
+    box-shadow: 1px 0px 5px 0 #ccd0d9;
 }
 header .maxwith{
-	display: flex;
-	width: 1040px;
-	margin: 0 auto;
-	position: relative;
+    display: flex;
+    width: 1040px;
+    margin: 0 auto;
+    position: relative;
 }
 header .maxwith div:nth-child(2){
 	margin-left: 30px;
