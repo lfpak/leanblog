@@ -1,0 +1,57 @@
+<div class="sidebar" id="sidebar">
+    <div class="title" onclick="change(1)">
+        <span><i class="iconfont iconMenu"></i></span>
+        <span>menu_1</span>
+        <span><i id="arrow1" class="iconfont iconArrowTop"></i></span>
+    </div>
+    <div class="menu" id="menu1">
+        <div class="item"><a href="/">index</a></div>
+        <div class="item"><a href="/item1">item_1</a></div>
+    </div>
+   <div class="title" onclick="change(2)">
+        <span><i class="iconfont iconMenu"></i></span>
+        <span>menu_2</span>
+        <span><i id="arrow2" class="iconfont iconArrowTop"></i></span>
+    </div>
+    <div class="menu" id="menu2">
+        <div class="item"><a href="/item2">item_2</a></div>
+        <div class="item"><a href="/item3">item_3</a></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    window.onload = function(){
+        var sidebar = document.getElementById('sidebar')
+        var arr_sidebar = sidebar.querySelectorAll('a')
+        for (var i = 0; i < arr_sidebar.length; i++) {
+            if (arr_sidebar[i].href == String(window.location.href)){
+                arr_sidebar[i].style.color = '#0079fe'
+                // var grandfather = arr_sidebar[i].parentNode.parentNode
+                // var index = Number(grandfather.id.slice(4,5))
+            }
+        }
+    }
+    function change(index){
+        var menu = document.getElementById('menu'+index)
+        var arrow = document.getElementById('arrow'+index)
+        var menus = menu.getElementsByClassName('item').length
+        
+        var height = menu.style.height
+        
+        if (height == ''){
+            menu.style.height = menus * 40 + 'px'
+            setTimeout(function(){
+            　   menu.style.height = '0px'
+            },1)
+            menu.style.overflow = 'hidden'
+            arrow.style.transform = 'rotate(180deg)'
+        }else if (height == '0px'){
+            menu.style.height = menus * 40 + 'px'
+            arrow.style.transform = 'rotate(0deg)'
+        }else{
+            menu.style.height = '0px'
+            arrow.style.transform = 'rotate(180deg)'
+        }
+    }
+</script>
+
