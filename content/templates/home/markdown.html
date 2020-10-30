@@ -13,8 +13,8 @@
     <body>
         {% include 'layout/header.html' %}
         <section>
-            {% include 'sidebar.html' %}
-            <div class="content">markdown</div>
+            {% include 'layout/home_sidebar.html' %}
+            <div class="content">{{ content }}</div>
         </section>
         {% include 'layout/footer.html' %}
     </body>
