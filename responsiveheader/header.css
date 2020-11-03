@@ -1,0 +1,84 @@
+header{
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    line-height: 45px;
+    box-shadow: 1px 0px 5px 0 #ccd0d9;
+    background-color: #fff;
+}
+header .maxwith{
+    display: flex;
+    width: 1040px;
+    margin: 0 auto;
+    position: relative;
+}
+header .maxwith div:nth-child(2){
+    margin-left: 30px;
+}
+header .logo,.login{
+    cursor: pointer;
+}
+header .maxwith .login{
+    position: absolute;
+    right: 0;
+}
+header a{
+    text-decoration: none;
+    color: #000;
+    padding: 0 6px 12px 6px;
+    margin-left: 25px;
+}
+header a:hover{
+    border-bottom: solid 2px #0079FE;
+}
+header .maxwith div:first-child .mobile-menu,.iconfont-sidebar,.iconfont-home{
+    display: none;
+}
+
+@media (max-width: 700px) {
+   header{
+        height: 45px;
+        overflow: hidden;
+        transition: all 0.3s ease;
+    }
+    header .maxwith{
+        width: 100%;
+        flex-flow: column;
+        text-align: center;
+    }
+    header .maxwith div:nth-child(2){
+        margin-left: 0;
+    }
+    header .maxwith .login{
+        position: static;
+    }
+    header a{
+        margin-left: 0;
+    }
+    header .maxwith div:first-child .logo{
+        display: none;
+    }
+    header .maxwith div:first-child .iconfont-home{
+        display: block;
+        float: left;
+        padding-left: 15px;
+    }
+    header .maxwith div:first-child .iconfont-sidebar{
+        display: block;
+        float: left;
+        padding-left: 25px;
+    }
+    header .maxwith div:first-child .mobile-menu{
+        float: right;
+        padding-right: 15px;
+        display: block;
+    }
+}
+@media (prefers-color-scheme: dark){
+    header{
+        background-color: #171723;
+    }
+    header a{
+        color: #fff;
+    }
+}

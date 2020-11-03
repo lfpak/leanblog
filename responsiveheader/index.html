@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+        <title>{{ content[1] }} - Myblog</title>
+        <link rel="stylesheet" type="text/css" href="../static/css/header.css"/>
+        <link rel="stylesheet" type="text/css" href="../static/css/section.css"/>
+        <link rel="stylesheet" type="text/css" href="../static/css/footer.css"/>
+        <link rel="stylesheet" type="text/css" href="../static/css/uieden.css"/>
+        <link rel="stylesheet" type="text/css" href="../static/css/iconfont.css"/>
+        <link rel="stylesheet" type="text/css" href="../static/css/code.css"/>
+    </head>
+    <body>
+        {% include 'layout/header.html' %}
+        <section>
+            {% include 'layout/home_sidebar.html' %}
+            <div class="content">{{ content[0] }}</div>
+        </section>
+        {% include 'layout/footer.html' %}
+    </body>
+    <script src="../static/script/highlight.min.js" type="text/javascript" charset="utf-8"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</html>
