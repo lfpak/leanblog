@@ -1,0 +1,52 @@
+<header id="header">
+    <div class="maxwith">
+        <div>
+            <span class="logo" onclick="openIndexPage()">logo</span>
+            <span class="iconfont-home" onclick="openIndexPage()"><i class="iconfont iconHome"></i></span>
+            <span class="iconfont-sidebar" onclick="openSidebar()"><i class="iconfont iconSidebar"></i></span>
+            <span class="mobile-menu" onclick="openMenu()"><i class="iconfont iconMenu"></i></span>
+        </div>
+        <div><a href="/page1">page1</a></div>
+        <div><a href="/#">page2</a></div>
+        <div><a href="/#">page3</a></div>
+        <div class="login">login</div>
+    </div>
+</header>
+<script type="text/javascript">
+    function openIndexPage(){
+        window.location.href = '/'
+    }
+    
+    function openMenu(){
+       var header = document.getElementById('header')
+       var divs = header.getElementsByTagName('div').length - 1
+       
+       height = header.style.height
+       
+       if (height == '' | height == '45px'){
+           height = divs * 45
+           header.style.height =  height + 'px'
+       }else{
+           header.style.height = '45px'
+       }
+    }
+    
+    function openSidebar(){
+        var sidebar = document.getElementById('sidebar')
+    
+        width = sidebar.style.width
+        
+        if (width == '' || width == '0px'){
+            sidebar.style.display = 'block'
+            setTimeout(function(){
+            　   sidebar.style.width = '200px'
+            },1)
+            sidebar.style.border = 'solid 1px #e4e4e4'
+            sidebar.style.marginRight = '30px'
+        }else{
+            sidebar.style.width = '0'
+            sidebar.style.border = '0'
+            sidebar.style.marginRight = '0'
+        }
+    }
+</script>

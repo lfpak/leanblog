@@ -1,0 +1,70 @@
+section{
+    min-height: calc(100% - 106px);
+    display: flex;
+    width: 1040px;
+    margin: 0 auto;
+    padding-top: 60px;
+}
+section .content{
+    flex: 1;
+    overflow: hidden;
+    word-break: break-word;
+}
+section .sidebar{
+    height: 100%;
+    width: 200px;
+    border-radius: 5px;
+    border: solid 1px #e4e4e4;
+    margin-right: 20px;
+}
+section .sidebar .title{
+    height: 40px;
+    line-height: 40px;
+    padding-left: 20px;
+    position: relative;
+    overflow: hidden;
+}
+section .sidebar .title .iconArrowTop{
+    position: absolute;
+    right: 15px;
+    transition: all 0.3s ease;
+}
+section .sidebar .menu{
+    transition: all 0.3s ease;
+}
+section .sidebar .item{
+    height: 40px;
+    line-height: 40px;
+    padding-left: 45px;
+    overflow: hidden;
+}
+section .sidebar .item a{
+    color: #000;
+    text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark){
+    section .sidebar .item a{
+        color: #FFFFFF;
+    }
+    section .content a{
+        color: #0079fe;
+        text-decoration: none;
+    }
+}
+
+@media (max-width: 700px) {
+    section{
+        width: auto;
+        padding: 40px 15px 0 15px;
+        min-height: calc(100% - 90px);
+    }
+    section .sidebar{
+        margin-top: 25px;
+        width: 0px;
+        margin-right: 0;
+        border: 0;
+        transition: all 0.3s ease;
+        display: none;
+    }
+}
